@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+// Colors
+$yellow: #FCD116;
+$green: #007A5E;
+$black: #000000;
+$gray: #52525B;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+  color: $black;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+p{
+  font-family: 'Epilogue', sans-serif;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.author{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-top: 1px solid $gray;
+  p{
+    text-align: center;
+    a:hover{
+      color: $green;
+    }
+  }
+}

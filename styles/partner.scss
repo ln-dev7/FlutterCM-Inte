@@ -1,0 +1,56 @@
+.partner {
+  background: $greenDark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .xl {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .partner-title {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  &-title {
+    position: relative;
+    h2 {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 31px;
+      color: $yellow;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      background: $yellow;
+      height: 100%;
+      right: -1rem;
+    }
+  }
+  &-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $yellow;
+    }
+  }
+}

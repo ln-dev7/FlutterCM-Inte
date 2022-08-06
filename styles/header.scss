@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  .xl {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      h2 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        color: #fff;
+        margin-top: 1px;
+      }
+    }
+    @media screen and (max-width: 460px) {
+      &-logo{
+        width: 40px;
+      }
+    }
+  }
+  &-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    li {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 22px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $red;
+      }
+    }
+
+    @media screen and (max-width: 940px) {
+      display: none;
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      h2 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        color: #fff;
+      }
+    }
+    button {
+      border: 3px solid #fff;
+      background: none;
+      padding: 0.8rem;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        background: #fff;
+        color: $red;
+      }
+    }
+
+    @media screen and (max-width: 460px) {
+      div {
+        h2 {
+          display: none;
+        }
+      }
+      button{
+        border-width: 2px;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
