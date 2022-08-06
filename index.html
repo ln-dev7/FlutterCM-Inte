@@ -5,11 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flutter Cameroon</title>
-    <link rel="icon" sizes="76x76" href="assets/icons/25.ico" />
+    <link rel="icon" sizes="76x76" href="assets/11.svg" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="splidejs/splide.min.css" />
+    <script src="splidejs/splide.min.js"></script>
     <script src="scripts/app.js" defer></script>
   </head>
   <body>
-    
+    <header class="header">
+      <div class="header__container">
+        <div class="header-logo">
+          <img src="assets/9.svg" alt="logo" />
+        </div>
+        <div class="header-nav">
+          <ul class="header-nav__links">
+            <a href="#">Events</a>
+            <a href="#">Forum</a>
+            <a href="#">Articles</a>
+            <a href="#">Podcasts</a>
+            <a href="#">Jobs</a>
+            <img src="assets/29.svg" alt="icon" />
+          </ul>
+          <div class="header-nav__auth">
+            <button>Login</button>
+            <button>Sign up</button>
+          </div>
+        </div>
+        <img class="menu-open" src="assets/12.svg" alt="icon" />
+        <div class="header-menu">
+          <div>
+            <img src="assets/29.svg" alt="icon" />
+            <img class="menu-close" src="assets/13.svg" alt="icon" />
+          </div>
+          <div>
+            <a href="#">Events</a>
+            <a href="#">Forum</a>
+            <a href="#">Articles</a>
+            <a href="#">Podcasts</a>
+            <a href="#">Jobs</a>
+            <button>Login</button>
+            <button>Sign up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero">
+      <div class="hero__container">
+        <img src="assets/6.svg" class="hero-illustration" alt="illustration" />
+        <div class="hero-text">
+          <div>
+            <h1>A community open to everyone</h1>
+            <p>
+              Flutter Cameroon is an initiative to focus the efforts of many
+              developers in and around Cameroon to learn, share and become
+              productive using Flutter.
+            </p>
+            <div>
+              <button>Join the 237community</button>
+              <button>Visit forum</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h3>106k</h3>
+              <span>Members on Meetup</span>
+            </div>
+            <div>
+              <h3>127k</h3>
+              <span>Stars on GitHub</span>
+            </div>
+            <div>
+              <h3>151.4k</h3>
+              <span>Followers on Twitter</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image tablet">
+          <img src="assets/1.jpeg" alt="image" />
+          <div>
+            <img src="assets/2.jpeg" alt="image" />
+            <img src="assets/3.jpeg" alt="image" />
+          </div>
+          <img src="assets/4.jpeg" alt="image" />
+        </div>
+        <div class="hero-image mobile">
+          <section class="splide" aria-label="hero image mobile">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="assets/1.jpeg" alt="image" />
+                </li>
+                <li class="splide__slide">
+                  <img src="assets/2.jpeg" alt="image" />
+                </li>
+                <li class="splide__slide">
+                  <img src="assets/3.jpeg" alt="image" />
+                </li>
+                <li class="splide__slide">
+                  <img src="assets/4.jpeg" alt="image" />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var splide = new Splide(".splide");
+      splide.mount();
+    </script>
   </body>
 </html>

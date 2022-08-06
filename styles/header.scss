@@ -2,109 +2,87 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
-  position: absolute;
-  top: 1.5rem;
-  left: 0;
-  right: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
-  .xl {
-    position: relative;
-    width: 100%;
+  border-bottom: 1px solid #f4f4f5;
+  background: #ffffff;
+  z-index: 3;
+  &__container {
+    width: 95%;
     max-width: 1280px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 2;
+    padding: 1rem 0;
   }
-  &-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    div {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      h2 {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 20px;
-        color: #fff;
-        margin-top: 1px;
-      }
-    }
-    @media screen and (max-width: 460px) {
-      &-logo{
-        width: 40px;
-      }
-    }
+  &-logo {
   }
-  &-links {
+  &-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    li {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 22px;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
-      &:hover {
-        color: $red;
-      }
-    }
+    gap: 1.5rem;
 
-    @media screen and (max-width: 940px) {
-      display: none;
-    }
-  }
-  &-right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    div {
+    &__links {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      h2 {
+      gap: 1rem;
+      a {
         font-weight: 400;
-        font-size: 18px;
-        line-height: 20px;
-        color: #fff;
+        font-size: 1.125rem;
+        transition: 0.3s color ease;
+        &:hover {
+          color: $green;
+        }
       }
-    }
-    button {
-      border: 3px solid #fff;
-      background: none;
-      padding: 0.8rem;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 20px;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
-      &:hover {
-        background: #fff;
-        color: $red;
+      img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        background: #f0fdf4;
+        border: 1px solid #dcfce7;
+        border-radius: 50%;
       }
     }
 
-    @media screen and (max-width: 460px) {
-      div {
-        h2 {
-          display: none;
+    &__auth {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      button {
+        padding: 0.5rem 1.125rem;
+        border: 2px solid $green;
+        background: $green;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: .3s ease;
+        &:first-child {
+            color: #ffffff;
+            &:hover{
+                opacity: 0.8;
+            }
+          }
+        &:last-child {
+            background: #fff;
+            color: $green;
+            border-color: #fff;
+            &:hover{
+                border-color: $green;
+                background: rgba($color: $green, $alpha: .05);
+            }
         }
       }
-      button{
-        border-width: 2px;
-        padding: 0.5rem;
-      }
     }
+  }
+  .menu-open {
+    display: none;
+  }
+  &-menu {
+    display: none;
   }
 }

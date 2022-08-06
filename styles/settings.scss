@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 // Colors
-$yellow: #FCD116;
-$green: #007A5E;
+$yellow: #fcd116;
+$green: #007a5e;
 $black: #000000;
-$gray: #52525B;
+$gray: #52525b;
 
 *,
 ::before,
 ::after {
   box-sizing: border-box;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   color: $black;
   font-weight: 300;
   margin: 0;
@@ -28,31 +28,39 @@ li {
   list-style: none;
 }
 
-p{
-  font-family: 'Epilogue', sans-serif;
-}
-
-img{
+img {
   max-width: 100%;
   height: auto;
   cursor: pointer;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
-.author{
+.author {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
   border-top: 1px solid $gray;
-  p{
+  p {
     text-align: center;
-    a:hover{
+    a:hover {
       color: $green;
     }
   }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
 }
