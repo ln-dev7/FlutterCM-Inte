@@ -22,12 +22,12 @@
     position: absolute;
   }
   h2 {
-    width: 100%;
     font-weight: 500;
     font-size: 48px;
     line-height: 3.5rem;
     color: #fff;
     z-index: 2;
+
     @media screen and (max-width: 478px) {
       line-height: 20px;
       font-size: 2rem;

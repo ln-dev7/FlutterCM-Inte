@@ -1,0 +1,56 @@
+.partner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 1.5rem 0;
+  &__container {
+    width: 95%;
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    background: $black;
+    gap: 1rem;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    h3 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 30px;
+    }
+    p {
+      color: #fff;
+      a {
+        color: #fcd116;
+      }
+    }
+    & > a {
+      display: inline-block;
+      padding: 0.5rem 1.125rem;
+      border: 2px solid #fcd116;
+      color: #fcd116;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: 0.3s ease;
+      &:hover {
+        background: #fcd116;
+        color: $black;
+      }
+    }
+  }
+  &-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
