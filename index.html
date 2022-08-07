@@ -118,8 +118,13 @@
     </div>
 
     <script>
-      var splide = new Splide(".splide");
-      splide.mount();
+      var elms = document.getElementsByClassName("splide");
+      for (var i = 0; i < elms.length; i++) {
+        new Splide(elms[0], {
+          type: "loop",
+          autoplay: true,
+        }).mount();
+      }
     </script>
   </body>
 </html>
