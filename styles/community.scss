@@ -72,6 +72,11 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 0.5rem;
+      &:hover{
+        h3{
+          color: $green;
+        }
+      }
       img {
         border-radius: 1rem;
         object-fit: cover;
@@ -82,6 +87,7 @@
         font-size: 1.5rem;
         line-height: 36px;
         font-weight: 700;
+        transition: .3s ease;
       }
       p {
         color: $gray;

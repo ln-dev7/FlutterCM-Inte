@@ -63,7 +63,19 @@
       align-items: flex-start;
       justify-content: flex-start;
       border-radius: 1rem;
+      &:hover {
+        .card-content {
+          transform: translateY(0);
+        }
+        h3 {
+          transform: translateY(-10rem);
+        }
+      }
       &-content {
+        // height: 200px;
+        // overflow-y: scroll;
+        transform: translateY(100%);
+        transition: 0.3s ease;
         width: 100%;
         align-self: flex-end;
         padding: 1rem;
@@ -75,6 +87,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+
         div {
           display: flex;
           justify-content: flex-start;
@@ -116,10 +129,13 @@
         }
       }
       h3 {
+        position: absolute;
         z-index: 2;
         color: #fff;
         font-weight: 500;
-        padding: 1rem;
+        top: 1rem;
+        left: 1rem;
+        transition: 0.3s ease;
       }
       img {
         position: absolute;
@@ -131,20 +147,29 @@
       &:nth-child(1) {
         grid-area: 1 / 1 / 5 / 3;
         height: 440px;
+        @media screen and (max-width: 660px) {
+          height: 300px;
+        }
       }
       &:nth-child(2) {
         grid-area: 1 / 3 / 3 / 5;
         height: 216px;
+        @media screen and (max-width: 660px) {
+          height: 300px;
+        }
       }
       &:nth-child(3) {
         grid-area: 3 / 3 / 5 / 5;
         height: 216px;
+        @media screen and (max-width: 660px) {
+          height: 300px;
+        }
       }
       &:nth-child(4) {
         grid-area: 1 / 5 / 5 / 7;
         height: 440px;
         @media screen and (max-width: 660px) {
-          height: 216px;
+          height: 300px;
         }
       }
     }

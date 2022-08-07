@@ -11,7 +11,7 @@
     align-items: center;
     margin: 1.5rem 0;
     .footer__container {
-      padding: 1.5rem 0;
+      padding: 1.5rem 1rem;
       background: #fafafa;
       width: 95%;
       max-width: 1280px;
@@ -30,11 +30,13 @@
       align-items: flex-start;
       gap: 1rem;
       @media screen and (max-width: 478px) {
-        div{
-            flex-direction: column;
-            button, input, a{
-                width: 100%;
-            }
+        div {
+          flex-direction: column;
+          button,
+          input,
+          a {
+            width: 100%;
+          }
         }
       }
       h3 {
@@ -55,6 +57,19 @@
           color: $gray;
           &:hover {
             color: $black;
+          }
+        }
+        button {
+          padding: 0.5rem 1.125rem;
+          border: 2px solid $black;
+          background: $black;
+          font-weight: 500;
+          cursor: pointer;
+          border-radius: 0.5rem;
+          transition: 0.3s ease;
+          color: #ffffff;
+          &:hover {
+            opacity: 0.8;
           }
         }
       }
