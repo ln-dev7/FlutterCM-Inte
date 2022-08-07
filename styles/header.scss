@@ -8,6 +8,17 @@
   border-bottom: 1px solid #f4f4f5;
   background: #ffffff;
   z-index: 3;
+  animation: introHeader 1s ease forwards;
+  @keyframes introHeader {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   &__container {
     width: 95%;
     max-width: 1280px;
