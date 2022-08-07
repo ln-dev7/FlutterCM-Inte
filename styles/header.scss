@@ -19,6 +19,9 @@
       opacity: 1;
     }
   }
+  @media screen and (max-width: 840px) {
+    animation: none;
+  }
   &__container {
     width: 95%;
     max-width: 1280px;
