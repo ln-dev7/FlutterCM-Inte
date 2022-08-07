@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,8 +7,90 @@
     width: 95%;
     max-width: 1280px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 5rem;
+  }
+  &-illustration {
+    // width: 700px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14rem;
+    padding-top: 16rem;
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      h1 {
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 60px;
+        display: flex;
+        align-items: center;
+        color: $black;
+      }
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $gray;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .5rem;
+        button {
+          padding: 0.5rem 1.125rem;
+          border: 2px solid $green;
+          background: $green;
+          font-weight: 500;
+          cursor: pointer;
+          border-radius: 0.5rem;
+          transition: 0.3s ease;
+          &:first-child {
+            color: #ffffff;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+          &:last-child {
+            background: #fff;
+            color: $green;
+            border-color: $green;
+            &:hover {
+              background: rgba($color: $green, $alpha: 0.05);
+            }
+          }
+        }
+      }
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h3{
+                color: #27272A;
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+            span{
+color: #52525B;
+            }
+        }
+    }
   }
   &-image.mobile {
     display: none;
@@ -16,19 +99,18 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
+    flex-shrink: 0;
     div {
-        flex-shrink: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: .5rem;
+      gap: 0.5rem;
     }
 
     img {
       width: 150px;
-      height: 450px;
+      height: 400px;
       object-fit: cover;
       border-radius: 75px;
     }

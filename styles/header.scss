@@ -74,7 +74,7 @@
           color: $green;
           border-color: #fff;
           &:hover {
-            border-color: #86efac;
+            border-color: $green;
             background: rgba($color: $green, $alpha: 0.05);
           }
         }
@@ -88,9 +88,8 @@
     }
   }
   &-overlay {
-    display: flex;
-    justify-content: flex-end;
     display: none;
+    justify-content: flex-end;
     position: fixed;
     inset: 0;
     width: 100%;
@@ -105,7 +104,7 @@
       align-items: center;
       justify-content: center;
       transform: translateX(100%);
-      transition: .3s ease;
+      transition: 0.3s ease;
       &__top {
         width: 100%;
         display: flex;
@@ -177,7 +176,7 @@
             &:last-child {
               background: #fff;
               color: $green;
-              border-color: #86efac;
+              border-color: $green;
               &:hover {
                 background: rgba($color: $green, $alpha: 0.05);
               }
@@ -189,8 +188,10 @@
         transform: translateX(0);
       }
     }
-    &.show {
+    @media screen and (max-width: 840px) {
+      &.show {
         display: flex;
+      }
     }
   }
 }
