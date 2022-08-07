@@ -34,8 +34,12 @@
     }
   }
   p {
+    text-align: center;
     z-index: 2;
     color: #fff;
+    @media screen and (max-width: 478px) {
+      text-align: left;
+    }
   }
   &-subscribe {
     display: flex;

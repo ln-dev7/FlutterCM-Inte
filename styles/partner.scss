@@ -14,6 +14,9 @@
     border-radius: 20px;
     background: $black;
     gap: 1rem;
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+    }
   }
   &-text {
     display: flex;
@@ -33,7 +36,9 @@
       }
     }
     & > a {
-      display: inline-block;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
       padding: 0.5rem 1.125rem;
       border: 2px solid #fcd116;
       color: #fcd116;
@@ -44,6 +49,9 @@
       &:hover {
         background: #fcd116;
         color: $black;
+      }
+      @media screen and (max-width: 478px) {
+        width: 100%;
       }
     }
   }
